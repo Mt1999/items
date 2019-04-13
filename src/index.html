@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>MT首页</title>
+		<link rel="stylesheet" type="text/css" href="/lib/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/index.css">
+		<script src="/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 引入头部样式 -->
+		<header id="header-container"></header>
+
+		<!-- 主体 -->
+		<div class="warp">
+			<!-- 轮播图 -->
+			<div class="swiper-container">
+				<ul>
+					<li class="ac"><a href="javascript:;"><img src="/img/picture/banner1226.jpg" /></a></li>
+					<li><a href="javascript:;"><img src="/img/picture/banner0715.jpg" /></a></li>
+					<li><a href="javascript:;"><img src="/img/picture/banner.jpg" /></a></li>
+					<li><a href="javascript:;"><img src="/img/picture/banner00717.jpg" /></a></li>
+				</ul>
+				<ol>
+					<li class="ac">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ol>
+			</div>
+			<div class="con clearfloat">
+				<a href="javascript:;" class="grid">
+					<figure class="effect-zoe">
+						<img src="/img/picture/20180929.jpg" />
+						<figcaption>
+							<h2>雨屏跑鞋全新上市</h2>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="javascript:;" class="grid">
+					<figure class="effect-zoe"><img src="/img/picture/special181008.jpg" />
+						<figcaption>
+							<h2><span>欲善其事，必先利其器</span></h2>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="javascript:;" class="grid">
+					<figure class="effect-zoe"><img src="/img/picture/special3.jpg" />
+						<figcaption>
+							<h2>361°成为2018年亚运会官方合作伙伴</h2>
+						</figcaption>
+					</figure>
+				</a>
+				<div class="recommend fl">
+					<div>
+						<a href="javascript:;">
+							<img src="/img/picture/recommend.jpg" />
+							<h2>跑步产品入口</h2>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;">
+							<img src="/img/picture/recommend2.jpg" />
+							<h2>综训产品入口</h2>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;">
+							<img src="/img/picture/recommend3.jpg" />
+							<h2>篮球产品入口</h2>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			.popVideo-pop {
+				display: none;
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: 50;
+			}
+
+			.popVideo-popcon {
+				width: 800px;
+				height: 500px;
+				border-radius: 10px;
+				background-color: #fff;
+				margin: auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+		</style>
+		<div class="popVideo-pop">
+			<div class="popVideo-popcon">
+				<span style="font-size: 30px;color: #000;padding: 10px 15px;float: right;cursor: pointer;">×</span><video style="width:760px;padding: 0 20px;"
+				 loop="loop" preload="none" controls="controls" name="media" src="http://361cdn.361sport.com/shop/subject/20180929/16-9-PC.mp4"></video></div>
+		</div>
+		<!--system Notice Begin-->
+		<div class="notice" style="display:none;">
+			<div>
+				<h2>361°消费者满意度调查问卷</h2><img id="system_close" src="/img/picture/close.png" />
+			</div>
+			<h3>亲爱的用户：</h3>
+			<p>感谢您对361°的大力支持，为了进一步了解您对361°提供的产品及服务的满意度，我们特开展此次消费者满意度调查活动，以便为您提供更好的产品及服务。</p><a href="/Wq/index.html" target="_blank">点击参与</a>
+			<script type="text/javascript">
+				$(function() {
+					$(document).on("click", "#system_close", function() {
+						$("div.notice").addClass("notice-close");
+						$("div.notice").fadeOut(1000);
+						return true;
+					});
+					$('.grid1').click(function() {
+						$('.popVideo-pop').show();
+						$('.popVideo-popcon video')[0].play();
+					})
+					$('.popVideo-popcon span').click(function() {
+						$('.popVideo-pop').hide();
+						$('.popVideo-popcon video')[0].pause();
+					})
+				})
+			</script>
+		</div>
+
+		<a href="javascript:;" class="return-top" style="display: inline;"></a>
+		<script type="text/javascript">
+			$(window).scroll(function() {
+				var scroHei = $(window).scrollTop(); //滚动的高度
+				if (scroHei > 200) {
+					$('.return-top').fadeIn();
+				} else {
+					$('.return-top').fadeOut();
+				}
+			});
+			/*点击返回顶部*/
+			$('.return-top').click(function() {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 1000);
+			})
+		</script>
+		<footer id="footer-container"></footer>
+
+
+		<script type="text/javascript" src="/lib/requirejs/require.js" data-main="/js/index.js"></script>
+	</body>
+</html>

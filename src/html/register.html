@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册会员</title>
+		<link rel="stylesheet" href="/css/register.css">
+		<link rel="stylesheet" href="/lib/font/iconfont.css">
+		<script src="/lib/jquery/jquery-3.2.1.js"></script>
+		
+	</head>
+	<body>
+		<!-- 引入头部样式 -->
+		<header id="header-container"></header>
+
+		<div class="wrap">
+			<div class="register data-table">
+				<h2>注册</h2>
+				<input type="text" placeholder="请输入昵称" id="nickname">
+				
+				<input type="password" placeholder="请输入6至16位密码" id="password">
+				
+				<button class="register-btn">立即注册</button>
+				<p>已有361°商城账号？<a href="/html/login.html">立即登录</a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//判断是否选中
+			var statement = $(".statement");
+			var fl = $("b");
+			var falg = true;
+			fl.on("click",function(){
+				if(falg){
+					fl.addClass("read");
+					falg=false;
+				}else{
+					fl.removeClass("read");
+					falg=true;
+				};
+			})
+		</script>
+		<!-- 引入底部 -->
+		<footer id="footer-container"></footer>
+
+		<script src="/lib/requirejs/require.js" data-main="/js/register.js"></script>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>购物车</title>
+		<link rel="stylesheet" href="/lib/font/iconfont.css">
+		<link rel="stylesheet" href="/css/cart.css">
+
+	</head>
+
+	<body>
+		<div class="header" id="header-container"></div>
+
+		<div class="wrap">
+			<div class="place-order3 headHeight">
+				<div class="place-order-con">
+					<h2 class="place-order3-h2">购物车</h2>
+					<div class="orderPay-details">
+						<div class="myOrder-tab-con">
+							<ul class="myorderDetails myorderDetails2">
+								<li>
+									<div class="listItem___3aUCt">
+										<div class="header___18tOx">
+											<div class="number___qQV8R">商品</div>
+											<span class="price___2M9N8">单价</span>
+											<span class="quantity___2Of">数量</span>
+											<span class="discount-N56">小计</span>
+											<span class="total___zr4yM">操作</span>
+										</div>
+										<!-- 没有商品 -->
+										<!-- <div class="orderCheckout-codeNull" style="padding-bottom:150px; padding-top:50px; padding-left:22px;">您的购物车是空的，马上
+											<a href="http://localhost/html/shop.html" style="color:#F99302; text-decoration: underline;">去逛逛</a>
+										</div> -->
+										<!-- 有商品 -->
+										<div class="body___2MMoL" id="cart_144213">
+											<ul class="left___3zr3D">
+												<li>
+													<ul class="product___2Hjqj">
+														<li class="desc___3cVUz"><span data-value="1" data-cartid="144213" class="product_select product_select2"></span><a
+															 href="javascript:;"><img src="http://361cdn.361sport.com/product/2018/12/14/m_5c1377b0bfd70.jpg"></a>
+															<div>
+																<h2>361-SPIRE 3</h2>
+																<p>颜色：灰色/黑色 尺码：42.5</p>
+															</div>
+														</li>
+														<li class="price___3CU0s">
+															<div class="">
+																<h3 data-price="899.00">¥899.00</h3>
+																<p>¥899.00</p>
+															</div>
+														</li>
+														<li class="discount__sadw">
+															<div class="cart-productNumber" data-cartid="144213" style="position:relative;"><button data-type="less"></button><input
+																 type="number" name="number" value="1" readonly="readonly"><button data-type="add"></button></div>
+														</li>
+														<li class="quantity___1M_ns">899.00</li>
+													</ul>
+												</li>
+											</ul>
+											<div class="right___2WZr">
+												<div class="cart-product-operation" data-cartid="144213">
+													<a id="remove" data-type="collect" href="javascript:void(0);">移到收藏夹</a>
+													<a id="cartdel" data-type="delete" href="javascript:void(0);">删除</a>
+												</div>
+											</div> 
+										</div>
+										
+									</div>
+								</li>
+							</ul>
+							<div class="cart-productSelect clearfloat">
+								<div class="whole"><input type="checkbox" id="allCheck"/>全选</span>购物车共 <b>1</b> 件商品，已选<b id="yx-cart">1</b>件产品</div>
+								<div class="cart-productBalance">
+									<p>总计（不含运费）<span>￥899.00</span></p>
+									<div class="product-buy"><button><a href="/html/list.html">继续购物</a></button><button id="jiesuan">结算</button></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer-container"></div>
+
+		<script type="text/html" id="cart-template">
+			{{each cart curr}}
+			<div class="body___2MMoL" id="cart_144213">
+				<ul class="left___3zr3D">
+					<li>
+						<ul class="product___2Hjqj">
+							<li class="desc___3cVUz">
+								<!-- <span data-value="1" data-cartid="144213" class="product_select product_select2"></span> -->
+								<input type="checkbox" class="check"  >
+								<a href="javascript:;">
+									<img src="{{curr.imgs}}">
+								</a>
+								<div>
+									<h2></h2>
+									<p>颜色：灰色/黑色 尺码：42.5</p>
+								</div>
+							</li>
+							<li class="price___3CU0s">
+								<div class="">
+									<h3 data-price="899.00">{{curr.price}}</h3>
+									<p>￥{{curr.original}}</p>
+								</div>
+							</li>
+							<li class="discount__sadw">
+								<div class="cart-productNumber" data-cartid="144213" style="position:relative;">
+									<button data-type="less"></button>
+									<input type="number" name="number" value="{{curr.num}}" readonly="readonly">
+									<button data-type="add"></button>
+								</div>
+							</li>
+							<li class="quantity___1M_ns">899.00</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="right___2WZr">
+					<div class="cart-product-operation" data-cartid="144213">
+						<!-- <a id="remove" data-type="collect" href="javascript:void(0);">移到收藏夹</a> -->
+						<a id="cartdel" data-type="delete" href="javascript:void(0);">删除</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</script>
+
+		<script src="/lib/requirejs/require.min.js" data-main="/js/cart.js"></script>
+	</body>
+
+</html>

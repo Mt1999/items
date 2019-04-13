@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>商品详情</title>
+		<!-- <link rel="stylesheet" href="../lib/font/iconfont.css"> -->
+		<link rel="stylesheet" href="/css/detail.css">
+		
+
+	</head>
+
+	<body>
+		
+		<!-- 加载头部 -->
+		<div id="header-container"></div>
+		<!-- 主要内容 -->
+		<div class="wrap">
+			
+		</div>
+		<script type="text/html" id="detail-template" >
+			<div class="product-con">
+				<div class="breadcrumb breadcrumb-product">
+					<span>所有分类</span>&gt;
+					<a href="/">首页</a>&gt;
+					<a href="/html/shop.html">商品列表</a>&gt;
+					<b>男常规训练鞋</b>
+				</div>
+				<div class="pv_xc">
+					<div class="pvxc_left">
+						<div id="piclist" data-dcolor="">
+							<div class="d-left">
+							    <div class="view_bd">
+							        <img class="zoom-img" src="{{imgs}}" 
+									data-zoom-image="{{imgs}}"/>
+							    </div>
+							    <div class="view_thumbs" id="gal1">
+							        <ul class="view-ul">
+							            <li class="current">
+							                <a href="#" data-image="{{imgs}}"
+											 data-zoom-image="{{imgs}}">
+							                <img class="s" src="{{imgs}}" />
+							                <i>^</i>
+							            </li>
+							            <li>
+							                <a href="#" data-image="{{imgs}}" 
+											data-zoom-image="{{imgs}}">
+							                <img class="s" src="{{imgs}}" />
+							                <i>^</i>
+							            </li>
+							            <li>
+							                <a href="#" data-image="{{imgs}}" 
+											data-zoom-image="{{imgs}}">
+							                <img class="s" src="{{imgs}}" />
+							                <i>^</i>
+							            </li>
+							            <li>
+							                <a href="#" data-image="{{imgs}}" 
+											data-zoom-image="{{imgs}}">
+							                <img class="s" src="{{imgs}}" />
+							                <i>^</i>
+							            </li>
+							        </ul>
+							    </div>
+							</div>
+						</div>
+					</div>
+					<div class="pvxc_right">
+						<h2>{{title}}<em>(571824422)</em></h2>
+						<h3>￥{{price}}</h3>
+						<div class="discount-con">
+							<span>原价:<b>{{original}}</b></span>
+							<span>运费: 不包邮 <a class="postage-express-btn" href="javascript:void(0);">( 运费详情 ) </a></span>
+							<!--<span><b>赠送积分：259</b><a href="/About/info.html?info=15" target="_blank">（积分规则）</a></span>-->
+							<!--运费详情-->
+						</div>
+						<p class="product-color">颜色分类<span>烟灰/乌黑色</span></p>
+						<ul class="product-color-choice">
+							<li class="select" data-color="烟灰/乌黑色">
+								<img title="烟灰/乌黑色" id="color_id" src="http://361cdn.361sport.com/product/2018/08/01/s_5b6131cdaaf42.jpg">
+							</li>
+							<li data-color="红色"><img title="午夜红/361度红" id="color_id" src="/img/picture/m_5c1377d7a6f56.jpg"></li>
+							<!-- <li data-color="乌黑色/烟灰"><img title="乌黑色/烟灰" id="color_id" src="http://361cdn.361sport.com/product/2018/08/01/s_5b6131d0418ef.jpg"></li> -->
+						</ul>
+						<div class="product-size">
+							<button data-size="" data-count="" class="size" id="detail-right">尺码选择 +</button>
+							<strong>
+								<span>数量</span>
+								<button id="changenumber" data-type="less">-</button>
+								<input type="text" name="number" value="1" readonly="readonly">
+								<button id="changenumber" data-type="add">+</button>
+							</strong>
+							<div class="product-size-choice">
+								<ul></ul>
+								<!--<a href="#" class="guide">尺码指南</a>-->
+							</div>
+						</div>
+						<div class="product-buy" data-pid="9045">
+							<button data-type="addcart" id="addcart">加入购物车</button>
+							<!-- <button data-type="buynow" id="buynow">立即购买</button> -->
+							<div class="product-buy-operation">
+								<a id="collect" class="product-operation-sdf" data-pid="9045" href="javascript:void(0);" title="收藏商品">收藏</a>
+								<b class="product-operation-sdf">分享
+									<div class="bdsharebuttonbox bdshare-button-style1-16" data-bd-bind="1554304693345">
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+								</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-details">
+				<div class="product-details-tit">
+					<ul class="clearfloat">
+						<li class="select">商品详情</li>
+						<li>商品评论</li>
+						<li>尺码说明</li>
+					</ul>
+				</div>
+				<div class="product-details-con" style="min-height: 400px;">
+					<div class="show">
+						<!--
+						<strong class="product-introduce"><ul><li>品牌：</li><li>货号：571824422</li><li>上市时间：2018年夏季</li><li>性别：男</li><li style="display:block; width:100%;">商品描述：</li></ul></strong>-->
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096278859311.jpg" title="1533096278859311.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096278731637.jpg" title="1533096278731637.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096278117935.jpg" title="1533096278117935.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096278117001.jpg" title="1533096278117001.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096278402841.jpg" title="1533096278402841.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096279261880.jpg" title="1533096279261880.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096279111218.jpg" title="1533096279111218.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096279357974.jpg" title="1533096279357974.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096279556172.jpg" title="1533096279556172.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096280326028.jpg" title="1533096280326028.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096280549033.jpg" title="1533096280549033.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096281272215.jpg" title="1533096281272215.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096281117232.jpg" title="1533096281117232.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096281105189.jpg" title="1533096281105189.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096282454287.jpg" title="1533096282454287.jpg"></p>
+						<p><img src="http://361cdn.361sport.com/uploads/image/20180801/1533096282197686.jpg" title="1533096282197686.jpg"></p>
+						<p><br></p>
+					</div>
+					<div>
+						<ul class="commodity-review">
+							<li class="orderCheckout-codeNull" style="text-align:center; border-bottom:none;">暂无评论</li>
+						</ul>
+					</div>
+					<div><img src="/img/cmsm_07.jpg"></div>
+				</div>
+			</div>
+			
+		</script>
+		
+		
+		<!-- 底部 -->
+		<div id="footer-container"></div>
+		
+		<script src="/lib/requirejs/require.min.js" data-main="/js/detail.js"></script>
+	</body>
+
+</html>

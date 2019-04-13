@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页面</title>
+		<link rel="stylesheet" type="text/css" href="/lib/swiper/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="/css/list.css" />
+		<script src="/lib/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/lib/requirejs/require.js" data-main="/js/list.js"></script>
+
+	</head>
+	<body class="">
+		<!-- 引入头部 -->
+		<header id="header-container"></header>
+		<!-- 内容 -->
+		<div class="wrap">
+			<div class="product-con">
+				<div class="breadcrumb">
+					<span>所有分类</span>
+					<b>所有商品</b>
+					<p class="fr search-results">搜索到1166件商品</p>
+				</div>
+			</div>
+			<div class="product-filter">
+				<ul>
+					<li class="product-filter-li"><span class="choosetitle">产品类别</span>
+						<ul>
+							<li><a href="javascript:;">鞋</a></li>
+							<li><a href="javascript:;">上装</a></li>
+							<li><a href="javascript:;">下装</a></li>
+							<li><a href="javascript:;">泳镜</a></li>
+							<li><a href="javascript:;">泳帽</a></li>
+							<li><a href="javascript:;">泳衣</a></li>
+							<li><a href="javascript:;">配件</a></li>
+							<li><a href="javascript:;">新品上市</a></li>
+						</ul>
+					</li>
+					<li class="product-filter-li"><span class="choosetitle">性别</span>
+						<ul>
+							<li><a href="javascript:;">女</a></li>
+							<li><a href="javascript:;">男</a></li>
+							<li><a href="javascript:;">女童</a></li>
+							<li><a href="javascript:;">男童</a></li>
+							<li><a href="javascript:;">男女同款</a></li>
+						</ul>
+					</li>
+					<li class="product-filter-li"><span class="choosetitle">科技</span>
+						<ul>
+							<li><a href="javascript:;">NFO磁悬浮</a></li>
+							<li><a href="javascript:;">BOUNDAIR°</a></li>
+							<li><a href="javascript:;">气悬浮科技</a></li>
+							<li><a href="javascript:;">超强避震MD材料</a></li>
+							<li><a href="javascript:;">特种橡胶花纹</a></li>
+							<li><a href="javascript:;">双悬浮科技</a></li>
+							<li><a href="javascript:;">FLEXI易窝折功能</a></li>
+							<li><a href="javascript:;">SPONGEE</a></li>
+							<li><a href="javascript:;">防侧翻结构</a></li>
+							<li><a href="javascript:;">硬地倍耐磨技术</a></li>
+							<li><a href="javascript:;">邦弹科技</a></li>
+							<li><a href="javascript:;">零感针织技术</a></li>
+							<li><a href="javascript:;">ARCHLOCK足弓锁</a></li>
+							<li><a href="javascript:;">sac-AIR气悬浮</a></li>
+							<li><a href="javascript:;">COOL</a></li>
+						</ul><span class="product-filter-more">更多 +</span>
+					</li>
+					<li class="product-filter-li"><span class="choosetitle">功能</span>
+						<ul>
+							<li><a href="javascript:;">海外</a></li>
+							<li><a href="javascript:;">时尚休闲</a></li>
+							<li><a href="javascript:;">篮球</a></li>
+							<li><a href="javascript:;">跑步</a></li>
+							<li><a href="javascript:;">足球</a></li>
+							<li><a href="javascript:;">小球类</a></li>
+							<li><a href="javascript:;">户外</a></li>
+							<li><a href="javascript:;">综训</a></li>
+							<li><a href="javascript:;">游泳</a></li>
+							<li><a href="javascript:;">运动生活</a></li>
+							<li><a href="javascript:;">情侣专区</a></li>
+						</ul>
+					</li>
+					<!--
+					<li class="product-filter-li"><span class="choosetitle">季节</span><ul><li><a href="">夏季</a></li><li><a href="">秋季</a></li><li><a href="">冬季</a></li><li><a href="">春季</a></li></ul></li>					-->
+				</ul>
+			</div>
+			<div class="mall-con clearfloat">
+				<ul class="product-sorting">
+					<li>排序方式：</li>
+					<li class="cruu">
+						<a >综合排序</a>
+					</li>
+					<li><a href="javascript:;">销量</a></li>
+					<li ><a href="javascript:;" class="pricedown">价格</a></li>
+				</ul>
+				<div class="commodity-con-sdws">
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/html" id="list-template">
+			{{each list item}}
+			<div class="commodity" data-id={{item.id}}>
+				<div class="commodity-div">
+					<a href="/html/detail.html?id={{item.id}}">
+						<img class="lazy" src="{{item.imgs}}" style="width:350px;" />
+					</a>
+					<div class="commodity-position" style="margin-top:15px;">
+						<div id="myscroll" class="commodity-strong clearfloat">
+							<ul>
+								<li><img data-bimg="{{item.imgs}}" src="{{item.imgs}}" /></li>
+								<li><img data-bimg="{{item.picture}}" src="{{item.picture}}" /></li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<h3>{{item.title}}</h3>
+						<p>¥ {{item.price}}</p>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</script>
+		
+		<!-- 返回顶部按钮 -->
+		<a href="javascript:;" class="return-top"></a>
+		<script type="text/javascript">
+			$(window).scroll(function() {
+				var scroHei = $(window).scrollTop();//滚动的高度
+				if (scroHei > 50) {
+					$('.return-top').fadeIn();
+				} else {
+					$('.return-top').fadeOut();
+				}
+			});
+				/*点击返回顶部*/
+			$('.return-top').click(function() {
+				$('body,html').animate({
+				scrollTop: 0
+				}, 1000);
+			})
+			//商品列表图片切换
+			$(document).on("mouseenter",'#myscroll li',function(){
+				var imgSrc = $(this).find('img').attr("data-bimg");
+				$(this).parent().parent().parent().siblings("a").children("img").attr('src',imgSrc);
+				return true;
+			});
+		</script>
+		
+		<footer id="footer-container"></footer>
+	</body>
+	
+</html>
